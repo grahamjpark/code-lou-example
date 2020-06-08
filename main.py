@@ -28,16 +28,16 @@ def get_todos():
     return """
 # Todo List
 [] Feed dog
+
 """
 
 def get_schedule():
-    return """
-Schedule
-| Hour | Task        |
-| ---- | ----------- |
-| 9:00 | Read emails |
-| 9:30 | asdf        |
-"""
+    with open("schedule.md") as f:
+        schedule = f.read()
+        return """
+# Schedule
+{}
+    """.format(schedule)
 
 
 output = ""
