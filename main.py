@@ -1,8 +1,9 @@
 import requests
+from datetime import datetime
 from secrets import WEATHER_API_KEY
 
 def get_date():
-    return "June 8, 2020"
+    return str(datetime.today().strftime('%B %d, %Y'))
 
 
 def get_weather():
