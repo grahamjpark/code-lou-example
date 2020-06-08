@@ -1,5 +1,6 @@
 import requests
 from datetime import datetime
+import pyperclip
 from secrets import WEATHER_API_KEY
 
 def get_date():
@@ -47,4 +48,4 @@ output += get_date()
 output += get_weather()
 output += get_todos()
 output += get_schedule()
-print(output)
+pyperclip.copy(output)
