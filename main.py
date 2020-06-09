@@ -42,10 +42,11 @@ def get_schedule():
     """.format(schedule)
 
 
-output = ""
+output = []
 
-output += get_date()
-output += get_weather()
-output += get_todos()
-output += get_schedule()
-pyperclip.copy(output)
+output.append(get_date())
+output.append(get_weather())
+output.append(get_todos())
+output.append(get_schedule())
+
+pyperclip.copy("".join(output))
